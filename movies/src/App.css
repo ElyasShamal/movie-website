@@ -40,8 +40,35 @@
   .icons {
     display: block;
   }
-
   .navbar {
+    display: none;
+  }
+
+  .open {
+    background-color: black;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 60%;
+    height: 80%;
+    color: white;
+  }
+
+  .open-menu {
+    margin-top: 30px;
+    font-size: 20px;
+    list-style: none;
+    border-top: 2px solid white;
+  }
+
+  .open-menu li {
+    border-bottom: 1px solid white;
+    padding: 10px 0px;
+  }
+}
+
+@media (min-width: 631px) {
+  .open {
     display: none;
   }
 }
