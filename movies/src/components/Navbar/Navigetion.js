@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Main from "../Main/Main";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Movie from "../Movies/Movie";
 
 function Navigetion() {
   const [showMenu, setShowMenu] = useState(false);
@@ -12,10 +13,10 @@ function Navigetion() {
         <div className="logo">Movie</div>
         <nav className="navbar">
           <ul>
-            <Link>
+            <Link to="/">
               <li>Home</li>
             </Link>
-            <Link>
+            <Link to="/Movies">
               <li>Movies</li>
             </Link>
             <Link>
@@ -48,6 +49,7 @@ function Navigetion() {
 
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/Movies" element={<Movie />} />
       </Routes>
     </Router>
   );
