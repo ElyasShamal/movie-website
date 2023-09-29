@@ -13,16 +13,16 @@ function Navigetion() {
         <div className="logo">Movie</div>
         <nav className="navbar">
           <ul>
-            <Link to="/">
+            <Link to="/" className="links">
               <li>Home</li>
             </Link>
-            <Link to="/Movies">
+            <Link to="/Movies" className="links">
               <li>Movies</li>
             </Link>
-            <Link>
+            <Link className="links">
               <li>Sign In</li>
             </Link>
-            <Link>
+            <Link className="links">
               <li>+</li>
             </Link>
           </ul>
@@ -38,10 +38,18 @@ function Navigetion() {
         {showMenu && (
           <div className="open">
             <ul className="open-menu">
-              <li>Home</li>
-              <li>Movie</li>
-              <li>Sign In</li>
-              <li>+</li>
+              <Link to="/" className="links">
+                <li>Home</li>
+              </Link>
+              <Link to="/Movies" className="links">
+                <li>Movies</li>
+              </Link>
+              <Link className="links">
+                <li>Sign In</li>
+              </Link>
+              <Link className="links">
+                <li>+</li>
+              </Link>
             </ul>
           </div>
         )}

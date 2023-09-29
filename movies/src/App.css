@@ -27,6 +27,15 @@
   cursor: pointer;
 }
 
+.navbar ul li:hover {
+  color: red;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+}
+
 .icons {
   display: none;
 }
