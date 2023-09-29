@@ -7,6 +7,7 @@ import Movie from "../Movies/Movie";
 
 function Navigetion() {
   const [showMenu, setShowMenu] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Router>
       <div className="header">
@@ -20,19 +21,16 @@ function Navigetion() {
               <li>Movies</li>
             </Link>
             <Link className="links">
-              <li onMouseEnter={() => setShowMenu(false)}>Sign In</li>
+              <li onMouseEnter={() => setIsOpen(false)}>Sign In</li>
             </Link>
             <Link className="links">
-              <li onMouseEnter={() => setShowMenu(!showMenu)}>+</li>
+              <li onMouseEnter={() => setIsOpen(!isOpen)}>+</li>
             </Link>
           </ul>
         </nav>
-        {showMenu && (
-          <div
-            className="Form-container"
-            onMouseLeave={() => setShowMenu(false)}
-          >
-            <form className="form">
+        {isOpen && (
+          <div className="Form-container" onMouseLeave={() => setIsOpen(false)}>
+            <form className="form" id="form">
               <h3 className="Form-title">Add Movie ?</h3>
               <label htmlFor="name">Title</label>
               <input type="text" placeholder="Movie Name" required />
