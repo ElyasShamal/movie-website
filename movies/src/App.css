@@ -40,6 +40,48 @@
   display: none;
 }
 
+.Form-container {
+  height: 70%;
+  width: 25%;
+  position: absolute;
+  top: 61px;
+  right: 6%;
+}
+
+form {
+  background-color: whitesmoke;
+  color: black;
+  height: 100%;
+  box-shadow: 5px 5px 5px 5px gray;
+  border: 2px solid black;
+  text-align: left;
+  padding: 30px;
+}
+.Form-title {
+  text-align: center;
+}
+
+form input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 5px 0px;
+  padding: 5px 10px;
+}
+
+form textarea {
+  margin: 5px 0px;
+  resize: none;
+  padding: 10px;
+}
+
+form button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px 10px;
+  text-align: center;
+}
+
 @media (max-width: 631px) {
   .header {
     display: flex;

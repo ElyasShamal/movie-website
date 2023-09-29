@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-import Main from "../Main/Main";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Main from "../Main/Main";
 import Movie from "../Movies/Movie";
 
 function Navigetion() {
@@ -20,13 +20,39 @@ function Navigetion() {
               <li>Movies</li>
             </Link>
             <Link className="links">
-              <li>Sign In</li>
+              <li onMouseEnter={() => setShowMenu(false)}>Sign In</li>
             </Link>
             <Link className="links">
-              <li>+</li>
+              <li onMouseEnter={() => setShowMenu(!showMenu)}>+</li>
             </Link>
           </ul>
         </nav>
+        {showMenu && (
+          <div
+            className="Form-container"
+            onMouseLeave={() => setShowMenu(false)}
+          >
+            <form className="form">
+              <h3 className="Form-title">Add Movie ?</h3>
+              <label htmlFor="name">Title</label>
+              <input type="text" placeholder="Movie Name" required />
+              <br></br>
+              <label htmlFor="image">Image</label>
+              <input type="text" placeholder="Image url" required />
+              <br></br>
+              <label for="Description">Description:</label>
+              <textarea
+                required
+                id="description"
+                name="description"
+                rows="5"
+                cols="39"
+              ></textarea>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        )}
 
         <div className="icons">
           <FontAwesomeIcon
