@@ -24,7 +24,7 @@ function Navigetion() {
               <li onMouseEnter={() => setIsOpen(false)}>Sign In</li>
             </Link>
             <Link className="links">
-              <li onMouseEnter={() => setIsOpen(!isOpen)}>+</li>
+              <li onClick={() => setIsOpen(!isOpen)}>+</li>
             </Link>
           </ul>
         </nav>
@@ -44,7 +44,7 @@ function Navigetion() {
               <br></br>
               <label htmlFor="image">Image</label>
               <input
-                autoComplete="Image"
+                autoComplete="image"
                 id="image"
                 type="text"
                 name="image"
