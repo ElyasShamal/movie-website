@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import Main from "../Main/Main";
+import Home from "../Home/Home";
 import Movie from "../Movies/Movie";
 
 function Navigetion() {
@@ -29,16 +29,30 @@ function Navigetion() {
           </ul>
         </nav>
         {isOpen && (
-          <div className="Form-container" onMouseLeave={() => setIsOpen(false)}>
+          <div className="Form-container">
             <form className="form" id="form">
               <h3 className="Form-title">Add Movie ?</h3>
               <label htmlFor="name">Title</label>
-              <input type="text" placeholder="Movie Name" required />
+              <input
+                autoComplete="name"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Movie Name"
+                required
+              />
               <br></br>
               <label htmlFor="image">Image</label>
-              <input type="text" placeholder="Image url" required />
+              <input
+                autoComplete="Image"
+                id="image"
+                type="text"
+                name="image"
+                placeholder="Image url"
+                required
+              />
               <br></br>
-              <label for="Description">Description:</label>
+              <label htmlFor="description">Description:</label>
               <textarea
                 required
                 id="description"
@@ -80,7 +94,7 @@ function Navigetion() {
       </div>
 
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Movies" element={<Movie />} />
       </Routes>
     </Router>
