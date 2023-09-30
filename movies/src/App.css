@@ -3,6 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: black;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
 .header {
   display: flex;
@@ -46,6 +51,7 @@
   position: absolute;
   top: 61px;
   right: 6%;
+  z-index: 1;
 }
 
 .form {
@@ -87,16 +93,14 @@
   background-position: center center;
   background-size: cover;
   width: 100%;
-  height: 80vh;
-  background-color: darkgray;
-  background-blend-mode: darken;
+  height: 90vh;
 }
 
 /* section one  */
 .home-section {
   position: relative;
   width: 100vw;
-  min-height: 80vh;
+  min-height: 90vh;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
@@ -131,6 +135,48 @@
   cursor: pointer;
 }
 
+.section-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80vw;
+  color: white;
+  padding-top: 100px;
+  margin: auto;
+}
+
+.article-two {
+  width: 40vw;
+}
+
+.article-two h2 {
+  padding-top: 10px;
+  font-size: 2rem;
+}
+
+.article-two p {
+  padding-top: 40px;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1120px) {
+  .section-two {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-two {
+    width: 100%;
+  }
+  .article-two h2 {
+    font-size: 2rem;
+  }
+
+  .article-two p {
+    padding-bottom: 30px;
+  }
+}
+
 @media (max-width: 631px) {
   .header {
     display: flex;
@@ -146,12 +192,13 @@
 
   .open {
     background-color: black;
-    position: fixed;
+    position: absolute;
     top: 60px;
     right: 0;
     width: 60%;
-    height: 80%;
+    height: 60%;
     color: white;
+    z-index: 1;
   }
 
   .open-menu {
@@ -164,11 +211,5 @@
   .open-menu li {
     border-bottom: 1px solid white;
     padding: 10px 0px;
-  }
-}
-
-@media (min-width: 631px) {
-  .open {
-    display: none;
   }
 }
