@@ -1,7 +1,21 @@
 import React from "react";
 
 function Movie() {
-  return <h1>Movie data</h1>;
+  return (
+    <section className="movies-container">
+      <div className="avaliable-movies">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+      </div>
+    </section>
+  );
 }
 
 export default Movie;
