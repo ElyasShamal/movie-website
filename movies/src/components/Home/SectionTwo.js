@@ -10,12 +10,10 @@ function SectionTwo() {
           players, and more.
         </p>
       </article>
-      <video controls>
-        <source
-          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
-          type="video/mp4"
-        ></source>
-      </video>
+      <img
+        src="https://pyxis.nymag.com/v1/imgs/a29/f1e/42f2f5b1e21932f0954c78f680cb67a141-mortal-kombat-blood-icicle.2x.rsocial.w290.gif"
+        alt="img"
+      />
     </section>
   );
 }
