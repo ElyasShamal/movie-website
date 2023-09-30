@@ -4,16 +4,18 @@ function SectionThree() {
   return (
     <section className="section-two">
       <img
+        className="img-2"
         src="https://64.media.tumblr.com/d75fefada618e7cd8e3dd69d53e1a47c/tumblr_pkl34a5oRo1wbg29ao4_500.gifv"
         alt="img"
-        style={{ maxWidth: "100%" }}
       />
 
       <article className="article-two">
-        <h2>Watch everywhere</h2>
+        <h3 className="article-title">Watch everywhere</h3>
         <p>
-          Stream unlimited movies and TV shows on your phone, tablet, laptop,
-          and TV.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+          expedita excepturi eum ab? Eum necessitatibus explicabo assumenda quos
+          minima, corporis qui possimus ab in. Fugit voluptatibus quas doloribus
+          recusandae a
         </p>
       </article>
     </section>

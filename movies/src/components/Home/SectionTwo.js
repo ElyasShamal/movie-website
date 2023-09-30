@@ -6,8 +6,10 @@ function SectionTwo() {
       <article className="article-two">
         <h2>Enjoy on your TV</h2>
         <p>
-          Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
-          players, and more.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+          expedita excepturi eum ab? Eum necessitatibus explicabo assumenda quos
+          minima, corporis qui possimus ab in. Fugit voluptatibus quas doloribus
+          recusandae acorporis qui possimus ab in. Fugit voluptatibus quas
         </p>
       </article>
       <img

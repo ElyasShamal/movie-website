@@ -20,6 +20,10 @@ body {
   align-items: center;
 }
 
+.logo {
+  color: red;
+  font-size: 24px;
+}
 .navbar ul {
   display: flex;
   flex-direction: row;
@@ -141,22 +145,36 @@ body {
   justify-content: space-between;
   width: 80vw;
   color: white;
-  padding-top: 100px;
+  padding-top: 150px;
   margin: auto;
 }
 
 .article-two {
-  width: 40vw;
+  width: 37vw;
 }
 
 .article-two h2 {
-  padding-top: 10px;
   font-size: 2rem;
+  color: red;
+  padding-top: 40px;
+}
+
+.img-2 {
+  margin-top: 15px;
+  height: 260px;
+}
+
+.article-title {
+  font-size: 2rem;
+  color: red;
 }
 
 .article-two p {
-  padding-top: 40px;
-  font-size: 2rem;
+  padding-top: 30px;
+  font-size: 1.5rem;
+  line-height: 35px;
+  word-spacing: 0px;
+  text-align: left;
 }
 
 @media screen and (max-width: 1120px) {
