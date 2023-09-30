@@ -161,6 +161,7 @@ body {
 
 .img-2 {
   margin-top: 15px;
+  width: auto;
   height: 260px;
 }
 
@@ -175,6 +176,24 @@ body {
   line-height: 35px;
   word-spacing: 0px;
   text-align: left;
+}
+
+.footer {
+  width: 100vw;
+  height: 40vh;
+  background-color: white;
+  margin: 100px 0px;
+  padding: 60px 0px;
+  color: black;
+  text-align: center;
+}
+
+footer a {
+  position: relative;
+  top: 30px;
+  color: black;
+  font-size: 30px;
+  margin: 0px 20px;
 }
 
 @media screen and (max-width: 1120px) {
@@ -202,6 +221,7 @@ body {
   }
   .icons {
     display: block;
+    color: red;
   }
   .navbar {
     display: none;

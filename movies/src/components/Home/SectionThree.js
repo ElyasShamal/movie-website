@@ -15,7 +15,8 @@ function SectionThree() {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
           expedita excepturi eum ab? Eum necessitatibus explicabo assumenda quos
           minima, corporis qui possimus ab in. Fugit voluptatibus quas doloribus
-          recusandae a
+          recusandae aminima, corporis qui possimus ab in. Fugit voluptatibus
+          quas doloribus recusandae aquas doloribus recusandae
         </p>
       </article>
     </section>
