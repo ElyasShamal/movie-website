@@ -99,7 +99,7 @@ body {
 /* section one  */
 .home-section {
   position: relative;
-  width: 100vw;
+  width: 100%;
   min-height: 90vh;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -181,7 +181,6 @@ body {
   .header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
   }
   .icons {
     display: block;
