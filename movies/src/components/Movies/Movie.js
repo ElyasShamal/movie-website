@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Movie() {
+  const [movies, SetMovies] = useState([]);
+
   return (
     <section className="movies-container">
       <div className="avaliable-movies">
