@@ -1,21 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Movie() {
-  const [movies, SetMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchMovie = () =>
+  //     fetch("https://api.sampleapis.com/movies/comedy").then((response) =>
+  //       response.json()
+  //     );
+
+  //   async function startFetching() {
+  //     const moviesData = await fetchMovie();
+
+  //     setMovies(moviesData);
+  //   }
+  //   startFetching();
+  // }, []);
 
   return (
     <section className="movies-container">
-      <div className="avaliable-movies">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-      </div>
+      {/* {movies.map((movie) => (
+        <div className="avaliable-movies" key={movie.id}>
+          <img src={movie.posterURL} alt={movie.title} />
+          <h2 style={{ color: "white" }}>{movie.title}</h2>
+        </div>
+      ))} */}
     </section>
   );
 }

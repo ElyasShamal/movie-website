@@ -200,26 +200,18 @@ footer a {
 /* movies section */
 
 .movies-container {
-  width: 100%;
-  margin-top: 5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.avaliable-movies {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 50px;
   width: 80%;
-  margin: auto;
+  margin: 150px auto;
+  min-height: 500px;
 }
 
-.avaliable-movies div {
-  background-color: black;
+.avaliable-movies img {
   width: 100%;
-  color: white;
-  text-align: center;
-  font-size: 25px;
+  height: 250px;
+  border-radius: 20px;
 }
 
 /* end of movie section */
