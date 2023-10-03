@@ -208,10 +208,23 @@ footer a {
   min-height: 500px;
 }
 
-.avaliable-movies img {
+.available-movies img {
   width: 100%;
   height: 200px;
-  border-radius: 20px;
+  position: relative;
+}
+
+.hover-button {
+  color: red;
+  position: relative;
+  bottom: 204px;
+  left: 170px;
+  background-color: white;
+  cursor: pointer;
+  padding: 7px 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
 }
 
 /* end of movie section */
