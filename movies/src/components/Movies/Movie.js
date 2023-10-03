@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import StarRating from "./StarRating";
+import AiFillHeart from "./Heart";
+import { AiFillEye } from "react-icons/ai";
 
 function Movie() {
   const [movies, setMovies] = useState([]);
@@ -47,16 +49,23 @@ function Movie() {
             onDoubleClick={() => handleDoubleClick(movie.id)}
             onClick={() => handleClick(movie.id)}
           />
-          <div style={{ position: "absolute" }}>
+          <div className="Clicks">
             {hoverStates[movie.id] && (
               <button className="hover-button">X</button>
             )}
           </div>
-          <div
-            className="titles"
-            style={{ color: "white", padding: "10px 0px 5px 10px" }}
-          >
+          <div className="titles">
             <h3 style={{ color: "white" }}>{movie.title}</h3>
+            <span style={{ color: "white" }}>
+              <AiFillHeart style={{ color: "red" }} />
+              {movie.likes}
+            </span>
+          </div>
+          <div className="flex-2">
+            <span style={{ color: "white" }}>
+              <AiFillEye />
+              {movie.views}
+            </span>
             <span style={{ color: "orange" }}>{StarRating(movie.rating)} </span>
           </div>
         </div>
