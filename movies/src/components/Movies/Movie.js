@@ -54,7 +54,7 @@ function Movie() {
               <button className="hover-button">X</button>
             )}
           </div>
-          <div className="titles">
+          <div className="flex-1">
             <h3 style={{ color: "white" }}>{movie.title}</h3>
             <span style={{ color: "white" }}>
               <AiFillHeart style={{ color: "red" }} />

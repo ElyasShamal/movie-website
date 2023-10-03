@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 body {
-  background-color: black;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -231,7 +230,7 @@ footer a {
   position: absolute;
 }
 
-.titles {
+.flex-1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

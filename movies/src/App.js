@@ -1,10 +1,10 @@
 import "./App.css";
-import Navigetion from "./components/Navbar/Navigetion";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
     <>
-      <Navigetion />
+      <Login />
     </>
   );
 }
