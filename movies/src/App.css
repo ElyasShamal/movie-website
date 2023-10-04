@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  background-color: black;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -271,6 +272,7 @@ footer a {
   display: flex;
   justify-content: center;
   margin-top: 15%;
+  min-height: 600px;
 }
 
 #login {
@@ -302,10 +304,10 @@ footer a {
 }
 
 #submit:hover {
-  background-color: #45a049;
+  background-color: red;
   cursor: pointer;
   color: white;
-  border-color: #45a049;
+  border-color: red;
 }
 
 @media (max-width: 631px) {

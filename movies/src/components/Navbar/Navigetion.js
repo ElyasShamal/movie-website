@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Home from "../Home/Home";
 import Movie from "../Movies/Movie";
+import Login from "../Login/Login";
 
 function Navigetion() {
   const [showMenu, setShowMenu] = useState(false);
@@ -20,7 +21,7 @@ function Navigetion() {
             <Link to="/Movies" className="links">
               <li>Movies</li>
             </Link>
-            <Link className="links">
+            <Link className="links" to="/Login">
               <li onMouseEnter={() => setIsOpen(false)}>Sign In</li>
             </Link>
             <Link className="links">
@@ -96,6 +97,7 @@ function Navigetion() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Movies" element={<Movie />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </Router>
   );

@@ -1,28 +1,87 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(
+        "https://phase-2-backend-json-server-template.onrender.com/Login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        navigate("/Home");
+      } else {
+        console.error("Login failed:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
   return (
     <div className="login-form">
-      <form id="login">
-        <h2>Sign Up</h2>
+      <form id="login" onSubmit={handleSubmit}>
+        <h2>Login</h2>
         <label htmlFor="name">
           Name
-          <input type="text" id="name" placeholder="Name" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            name="name"
+            onChange={handleChange}
+            value={formData.name}
+          />
         </label>
         <br></br>
         <label htmlFor="email">
           Email
-          <input type="text" id="email" placeholder="Email" />
+          <input
+            type="text"
+            id="email"
+            placeholder="Email"
+            name="email"
+            onChange={handleChange}
+            value={formData.email}
+          />
         </label>
         <br></br>
         <label htmlFor="password">
           Passw
-          <input type="password" id="password" placeholder="Password" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            name="password"
+            onChange={handleChange}
+            value={formData.password}
+          />
         </label>
         <br></br>
         <div className="submit">
           <button id="submit" type="Submit">
-            Sign Up
+            Login
           </button>
         </div>
       </form>
