@@ -264,6 +264,50 @@ footer a {
   }
 }
 
+/* login form */
+
+.login-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+}
+
+#login {
+  margin: auto;
+  height: 350px;
+  background-color: whitesmoke;
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 0 5rem;
+}
+
+#login input {
+  padding: 5px;
+  margin: 0.5rem 1rem;
+}
+
+.submit {
+  text-align: center;
+}
+
+#login h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#submit {
+  margin-top: 1rem;
+  padding: 5px 20px;
+}
+
+#submit:hover {
+  background-color: #45a049;
+  cursor: pointer;
+  color: white;
+  border-color: #45a049;
+}
+
 @media (max-width: 631px) {
   .header {
     display: flex;
