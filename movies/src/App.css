@@ -202,7 +202,7 @@ footer a {
 .movies-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 50px;
+  grid-gap: 30px;
   width: 80%;
   margin: 150px auto;
   min-height: 500px;
@@ -272,7 +272,7 @@ footer a {
   display: flex;
   justify-content: center;
   margin-top: 15%;
-  min-height: 600px;
+  min-height: 500px;
 }
 
 #login {

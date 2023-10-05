@@ -39,6 +39,8 @@ function Movie() {
     }));
   };
 
+  const updateLike = () => {};
+
   return (
     <section className="movies-container">
       {movies.map((movie) => (
@@ -57,7 +59,7 @@ function Movie() {
           <div className="flex-1">
             <h3 style={{ color: "white" }}>{movie.title}</h3>
             <span style={{ color: "white" }}>
-              <AiFillHeart style={{ color: "red" }} />
+              <AiFillHeart style={{ color: "red" }} onClick={updateLike} />
               {movie.likes}
             </span>
           </div>
