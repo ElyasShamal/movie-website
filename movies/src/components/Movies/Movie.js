@@ -3,7 +3,7 @@ import StarRating from "./StarRating";
 import AiFillHeart from "./Heart";
 import { AiFillEye } from "react-icons/ai";
 
-function Movie() {
+function Movie({ movieId }) {
   const [movies, setMovies] = useState([]);
   const [hoverStates, setHoverStates] = useState({});
 
@@ -39,8 +39,28 @@ function Movie() {
     }));
   };
 
-  const updateLike = () => {};
+  function updateLike() {}
 
+  const handleDeleteClick = (movieId) => {
+    console.log("Deleting movie with ID:", movieId);
+    fetch(
+      `https://phase-2-backend-json-server-template.onrender.com/Movies/${movieId}`,
+      {
+        method: "DELETE",
+      }
+    )
+      .then((response) => {
+        console.log("Response status:", response.status);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const updatedMovies = movies.filter((movie) => movie.id !== movieId);
+        setMovies(updatedMovies);
+      })
+      .catch((error) => {
+        console.error("Error deleting movie:", error);
+      });
+  };
   return (
     <section className="movies-container">
       {movies.map((movie) => (
@@ -53,13 +73,21 @@ function Movie() {
           />
           <div className="Clicks">
             {hoverStates[movie.id] && (
-              <button className="hover-button">X</button>
+              <button
+                className="hover-button"
+                onClick={() => handleDeleteClick(movie.id)}
+              >
+                X
+              </button>
             )}
           </div>
           <div className="flex-1">
             <h3 style={{ color: "white" }}>{movie.title}</h3>
             <span style={{ color: "white" }}>
-              <AiFillHeart style={{ color: "red" }} onClick={updateLike} />
+              <AiFillHeart
+                style={{ color: "red" }}
+                onClick={() => updateLike(movie.id)}
+              />
               {movie.likes}
             </span>
           </div>
