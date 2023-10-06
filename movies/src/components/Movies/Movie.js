@@ -39,10 +39,53 @@ function Movie({ movieId }) {
     }));
   };
 
-  function updateLike() {}
+  const updateLike = (movieId) => {
+    console.log("Updating likes for movie ID:", movieId);
 
+    // Find the movie by ID
+    const movieToUpdate = movies.find((movie) => movie.id === movieId);
+
+    if (!movieToUpdate) {
+      console.error("Movie not found for ID:", movieId);
+      return;
+    }
+
+    // Calculate the updated likes count (for example, increment by 1)
+    const updatedLikes = movieToUpdate.likes + 1;
+    console.log("Updated likes:", updatedLikes);
+
+    fetch(
+      `https://phase-2-backend-json-server-template.onrender.com/Movies/${movieId}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ likes: updatedLikes }),
+      }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json(); // Parse the response data
+      })
+      .then((updatedData) => {
+        const updatedMovies = movies.map((movie) =>
+          movie.id === movieId ? { ...movie, likes: updatedData.likes } : movie
+        );
+
+        setMovies(updatedMovies);
+        console.log("Movies state updated:", updatedMovies);
+      })
+      .catch((error) => {
+        console.error("Error updating likes:", error);
+      });
+  };
+
+  // delete method;
   const handleDeleteClick = (movieId) => {
-    console.log("Deleting movie with ID:", movieId);
+    console.log(movieId);
     fetch(
       `https://phase-2-backend-json-server-template.onrender.com/Movies/${movieId}`,
       {
@@ -82,12 +125,14 @@ function Movie({ movieId }) {
             )}
           </div>
           <div className="flex-1">
-            <h3 style={{ color: "white" }}>{movie.title}</h3>
-            <span style={{ color: "white" }}>
-              <AiFillHeart
-                style={{ color: "red" }}
-                onClick={() => updateLike(movie.id)}
-              />
+            <h3>{movie.title}</h3>
+            <span
+              onClick={() => {
+                updateLike(movie.id);
+              }}
+            >
+              <AiFillHeart />
+
               {movie.likes}
             </span>
           </div>
