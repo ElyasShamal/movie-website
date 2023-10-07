@@ -5,6 +5,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Home from "../Home/Home";
 import Movie from "../Movies/Movie";
 import Login from "../Login/Login";
+import AddForm from "./AddForm";
 
 function Navigetion() {
   const [showMenu, setShowMenu] = useState(false);
@@ -31,39 +32,7 @@ function Navigetion() {
         </nav>
         {isOpen && (
           <div className="Form-container">
-            <form className="form" id="form">
-              <h3 className="Form-title">Add Movie ?</h3>
-              <label htmlFor="name">Title</label>
-              <input
-                autoComplete="name"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Movie Name"
-                required
-              />
-              <br></br>
-              <label htmlFor="image">Image</label>
-              <input
-                autoComplete="image"
-                id="image"
-                type="text"
-                name="image"
-                placeholder="Image url"
-                required
-              />
-              <br></br>
-              <label htmlFor="description">Description:</label>
-              <textarea
-                required
-                id="description"
-                name="description"
-                rows="5"
-                cols="39"
-              ></textarea>
-
-              <button type="submit">Submit</button>
-            </form>
+            <AddForm />
           </div>
         )}
 

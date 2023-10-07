@@ -248,32 +248,14 @@ footer a {
 
 /* end of movie section */
 
-@media screen and (max-width: 1120px) {
-  .section-two {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .article-two {
-    width: 100%;
-  }
-  .article-two h2 {
-    font-size: 2rem;
-  }
-
-  .article-two p {
-    padding-bottom: 30px;
-  }
-}
-
 /* login form */
 
 .login-form {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 15%;
-  min-height: 500px;
+  margin-top: 10%;
+  min-height: 540px;
 }
 
 #login {
@@ -309,6 +291,24 @@ footer a {
   cursor: pointer;
   color: white;
   border-color: red;
+}
+
+@media screen and (max-width: 1120px) {
+  .section-two {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-two {
+    width: 100%;
+  }
+  .article-two h2 {
+    font-size: 2rem;
+  }
+
+  .article-two p {
+    padding-bottom: 30px;
+  }
 }
 
 @media (max-width: 631px) {
