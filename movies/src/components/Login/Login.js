@@ -30,7 +30,7 @@ function Login() {
       );
 
       if (response.ok) {
-        navigate("/Home");
+        navigate("/");
       } else {
         console.error("Login failed:", response.statusText);
       }
@@ -46,6 +46,7 @@ function Login() {
         <label htmlFor="name">
           Name
           <input
+            required
             type="text"
             id="name"
             placeholder="Name"
@@ -58,6 +59,7 @@ function Login() {
         <label htmlFor="email">
           Email
           <input
+            required
             type="text"
             id="email"
             placeholder="Email"
@@ -70,6 +72,7 @@ function Login() {
         <label htmlFor="password">
           Passw
           <input
+            required
             type="password"
             id="password"
             placeholder="Password"
