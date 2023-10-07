@@ -23,7 +23,7 @@ function Navigetion() {
               <li>Movies</li>
             </Link>
             <Link className="links" to="/Login">
-              <li onMouseEnter={() => setIsOpen(false)}>Sign In</li>
+              <li onMouseEnter={() => setIsOpen(false)}>Login</li>
             </Link>
             <Link className="links">
               <li onClick={() => setIsOpen(!isOpen)}>+</li>

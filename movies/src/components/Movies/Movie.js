@@ -40,19 +40,14 @@ function Movie({ movieId }) {
   };
 
   const updateLike = (movieId) => {
-    console.log("Updating likes for movie ID:", movieId);
-
-    // Find the movie by ID
     const movieToUpdate = movies.find((movie) => movie.id === movieId);
 
     if (!movieToUpdate) {
-      console.error("Movie not found for ID:", movieId);
       return;
     }
 
     // Calculate the updated likes count (for example, increment by 1)
     const updatedLikes = movieToUpdate.likes + 1;
-    console.log("Updated likes:", updatedLikes);
 
     fetch(
       `https://phase-2-backend-json-server-template.onrender.com/Movies/${movieId}`,

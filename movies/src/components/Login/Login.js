@@ -40,12 +40,13 @@ function Login() {
   };
 
   return (
-    <div className="login-form">
+    <div className="login-form" id="login-form">
       <form id="login" onSubmit={handleSubmit}>
         <h2>Login</h2>
         <label htmlFor="name">
           Name
           <input
+            autoComplete="name"
             required
             type="text"
             id="name"
@@ -59,6 +60,7 @@ function Login() {
         <label htmlFor="email">
           Email
           <input
+            autoComplete="Email"
             required
             type="text"
             id="email"
@@ -72,6 +74,7 @@ function Login() {
         <label htmlFor="password">
           Passw
           <input
+            autoComplete="password"
             required
             type="password"
             id="password"
