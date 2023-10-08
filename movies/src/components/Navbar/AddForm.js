@@ -4,8 +4,9 @@ function AddForm() {
   const [formData, setFormData] = useState({
     title: "",
     image: "",
-    rating: "",
-    views: "",
+    rating: 1,
+    views: 0,
+    likes: 0,
   });
 
   const handleChange = (e) => {
@@ -13,9 +14,7 @@ function AddForm() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const AddData = async (e) => {
-    e.preventDefault();
-
+  const AddData = async () => {
     try {
       const response = await fetch(
         "https://phase-2-backend-json-server-template.onrender.com/Movies",
@@ -32,8 +31,9 @@ function AddForm() {
         setFormData({
           title: "",
           image: "",
-          rating: "",
-          views: "",
+          rating: 1,
+          views: 0,
+          likes: 0,
         });
       } else {
         console.error("Error:", response.status);
@@ -48,7 +48,7 @@ function AddForm() {
       <h3 className="Form-title">Add Movie ?</h3>
       <label htmlFor="title">Title</label>
       <input
-        autoComplete="title"
+        autoComplete="given-name"
         type="text"
         id="title"
         name="title"
@@ -60,7 +60,7 @@ function AddForm() {
       <br></br>
       <label htmlFor="image">Image</label>
       <input
-        autoComplete="image"
+        autoComplete="given-Url"
         id="image"
         type="text"
         name="image"
@@ -72,18 +72,32 @@ function AddForm() {
       <br></br>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <label htmlFor="rating">Rate:</label>
-        <select id="rating" value={formData.rating} onChange={handleChange}>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
+        <select id="rating" name="rating">
+          <option value={formData.rating} onChange={handleChange}>
+            1
+          </option>
+          <option value={formData.rating} onChange={handleChange}>
+            2
+          </option>
+          <option value={formData.rating} onChange={handleChange}>
+            3
+          </option>
+          <option value={formData.rating} onChange={handleChange}>
+            4
+          </option>
+          <option value={formData.rating} onChange={handleChange}>
+            5
+          </option>
         </select>
         <br></br>
         <label htmlFor="rating">views:</label>
-        <select value={formData.views} onChange={handleChange}>
-          <option value="1">1</option>
-          <option value="2">2</option>
+        <select id="view">
+          <option value={formData.views} onChange={handleChange}>
+            1
+          </option>
+          <option value={formData.views} onChange={handleChange}>
+            2
+          </option>
         </select>
       </div>
       <button type="submit">Submit</button>

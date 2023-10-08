@@ -3,10 +3,11 @@ import StarRating from "./StarRating";
 import AiFillHeart from "./Heart";
 import { AiFillEye } from "react-icons/ai";
 
-function Movie({ movieId }) {
+function Movie() {
   const [movies, setMovies] = useState([]);
   const [hoverStates, setHoverStates] = useState({});
 
+  //Get Method
   useEffect(() => {
     const fetchMovie = () =>
       fetch(
@@ -46,7 +47,6 @@ function Movie({ movieId }) {
       return;
     }
 
-    // Calculate the updated likes count (for example, increment by 1)
     const updatedLikes = movieToUpdate.likes + 1;
 
     fetch(
@@ -61,9 +61,9 @@ function Movie({ movieId }) {
     )
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error("Network response");
         }
-        return response.json(); // Parse the response data
+        return response.json();
       })
       .then((updatedData) => {
         const updatedMovies = movies.map((movie) =>
@@ -90,7 +90,7 @@ function Movie({ movieId }) {
       .then((response) => {
         console.log("Response status:", response.status);
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error("Network response");
         }
         const updatedMovies = movies.filter((movie) => movie.id !== movieId);
         setMovies(updatedMovies);

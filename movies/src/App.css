@@ -218,7 +218,7 @@ footer a {
   color: red;
   position: relative;
   bottom: 204px;
-  left: 170px;
+  left: 186px;
   background-color: white;
   cursor: pointer;
   padding: 7px 10px;
@@ -309,6 +309,9 @@ footer a {
   .article-two p {
     padding-bottom: 30px;
   }
+  .article-title {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 631px) {
@@ -319,6 +322,7 @@ footer a {
   .icons {
     display: block;
     color: red;
+    margin-right: 10px;
   }
   .navbar {
     display: none;
@@ -345,5 +349,18 @@ footer a {
   .open-menu li {
     border-bottom: 1px solid white;
     padding: 10px 0px;
+  }
+
+  .article-title {
+    margin-top: 40px;
+  }
+
+  #get-started {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .img-2 {
+    height: auto;
   }
 }
