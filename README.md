@@ -31,7 +31,7 @@ Follow these steps to install and set up the Movie App (React):
 ```  
 5 . The Movie app will open in your default web browser.  
 6. Click on the "+ sign" button to add movies to the app. Fill in the required details such as title, image, and rate. then click the "submit" button  
-7. Once you have added movies, they will be listed. Double-click on each image you will see the X button by using that X button we can delete the movie
+7. Once you have added movies, they will be listed. Double-click on each image you will see the X button by using that X button we can delete the movie  
 8. The backend of this project is available in this repository https://github.com/ElyasShamal/phase-2-backend-json-server-template  
 
 ## License  
