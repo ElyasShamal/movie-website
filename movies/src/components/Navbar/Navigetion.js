@@ -16,13 +16,13 @@ function Navigetion() {
         <div className="logo">Movie</div>
         <nav className="navbar">
           <ul>
-            <Link to="/" className="links">
+            <Link to="/Home" className="links">
               <li>Home</li>
             </Link>
             <Link to="/Movies" className="links">
               <li>Movies</li>
             </Link>
-            <Link className="links" to="/Login">
+            <Link className="links" to="/">
               <li onMouseEnter={() => setIsOpen(false)}>Login</li>
             </Link>
             <Link className="links">
@@ -46,13 +46,13 @@ function Navigetion() {
         {showMenu && (
           <div className="open">
             <ul className="open-menu">
-              <Link to="/" className="links">
+              <Link to="/Home" className="links">
                 <li>Home</li>
               </Link>
               <Link to="/Movies" className="links">
                 <li>Movies</li>
               </Link>
-              <Link className="links">
+              <Link className="links" to="/">
                 <li>Sign In</li>
               </Link>
               <Link className="links">
@@ -64,9 +64,9 @@ function Navigetion() {
       </div>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/Movies" element={<Movie />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/" element={<Login />} />
       </Routes>
     </Router>
   );

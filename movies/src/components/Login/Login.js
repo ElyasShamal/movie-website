@@ -30,7 +30,7 @@ function Login() {
       );
 
       if (response.ok) {
-        navigate("/");
+        navigate("/Home");
       } else {
         console.error("Login failed:", response.statusText);
       }

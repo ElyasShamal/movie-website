@@ -94,7 +94,7 @@ body {
 
 /* home section */
 .main-container {
-  background-image: url("https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/028/636/070/small/an-empty-director-chair-in-front-of-an-empty-film-set-gloomy-background-photo.jpg");
   background-position: center center;
   background-size: cover;
   width: 100%;
@@ -216,9 +216,9 @@ footer a {
 
 .hover-button {
   color: red;
-  position: relative;
-  bottom: 204px;
-  left: 186px;
+  position: absolute;
+  bottom: 166px;
+  right: 0;
   background-color: white;
   cursor: pointer;
   padding: 7px 10px;
@@ -228,7 +228,7 @@ footer a {
 }
 
 .Clicks {
-  position: absolute;
+  position: relative;
 }
 
 .flex-1 {
