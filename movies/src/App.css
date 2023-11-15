@@ -94,18 +94,24 @@ body {
 
 /* home section */
 .main-container {
-  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/028/636/070/small/an-empty-director-chair-in-front-of-an-empty-film-set-gloomy-background-photo.jpg");
+  width: 100%;
+  height: 100vh;
+}
+
+.background-image {
+  position: absolute;
   background-position: center center;
   background-size: cover;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+  z-index: 0;
 }
 
 /* sections  */
 .home-section {
   position: relative;
   width: 100%;
-  min-height: 90vh;
+  min-height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
@@ -182,17 +188,16 @@ body {
 .footer {
   width: 100vw;
   height: 40vh;
-  background-color: white;
   margin: 100px 0px;
   padding: 60px 0px;
-  color: black;
+  color: white;
   text-align: center;
 }
 
 footer a {
   position: relative;
   top: 30px;
-  color: black;
+  color: white;
   font-size: 30px;
   margin: 0px 20px;
 }
